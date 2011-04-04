@@ -59,6 +59,14 @@ Our data, as posted on Blackboard, was collected based on Professor Downing's mi
           ** organizations
 
 =Create an XML schema and XML instance=
+Our Schema was roughly designed around Downing's specifications. There were some changes based on protected words, usually name or type. We used most things in sequence, so form is required. And we made many fields optional (0 or 1 instances). For most instances of multiplicity, instead of making multiple fields directly available, we created a single instance that allowed multiple elements inside.
+
+One large difference between our design and the specifications is that we removed Ways to Help in favor of merging that data with resources needed.
+
+We also made a single Impact type that would account for both Human and Economic impacts, as well as any other type of impact, such as Environmental.
+Additionally, we added an optional gross cost under the overall Impacts Type (which is multiple impacts, plus the gross) which would allow information such as "Total humans affected" in neat understandable location.
+
+In order to relate Crises and People and Organizations to each other, we used a system of keys and keyrefs, where the my_name field of each individual object is set up as a key in the xsd, so there are no replicated names. And each object has a related section that also have their own my_name's in them. Those my_name's are used as key references that require that their value matches some key. This guarantees that there are no hanging links.
 
 =Create a set of GAE datastore models=
 
