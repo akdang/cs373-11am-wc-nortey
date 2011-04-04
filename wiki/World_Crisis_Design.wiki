@@ -49,7 +49,7 @@ Our data, as posted on Blackboard, was collected based on Professor Downing's mi
           ** contact info
           ** social networks (e.g. Facebook, Twitter, etc.)
           ** crises
-          ** people
+          ** peopleCreate a set of GAE datastore models
     * people
           ** name
           ** kind
@@ -69,6 +69,7 @@ Additionally, we added an optional gross cost under the overall Impacts Type (wh
 In order to relate Crises and People and Organizations to each other, we used a system of keys and keyrefs, where the my_name field of each individual object is set up as a key in the xsd, so there are no replicated names. And each object has a related section that also have their own my_name's in them. Those my_name's are used as key references that require that their value matches some key. This guarantees that there are no hanging links.
 
 =Create a set of GAE datastore models=
+We used Beautiful Soup to parse the XML. We had three large outer tags (crises, people, organizations). We walk through the XML and store everything into a dictionary. Then we move everything from the dictionary into our internal datastore. For our data store design, we decided to make multiple tables and reference some tables by using the name property as a foreign key. We have a datastore table for all of the important tables (crises, related people, related organizations, locations, impacts, videos, images, resources needed, and social networks).
 
 =Create an import/export facility=
 == Upload ==
