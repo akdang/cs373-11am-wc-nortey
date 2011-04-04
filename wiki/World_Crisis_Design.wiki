@@ -1,0 +1,75 @@
+#summary Implementation and Design for world crises tracker
+
+=Introduction=
+
+Link: http://world-crisis.appspot.com/
+
+By the end of this project, we’ll have a Google App Engine application that tracks world crises, similar to how IMdB tracks movies and movie stars.
+
+IMDB has two major kinds of pages: movies/shows and people. Movies/shows link to people and people link back to movies/shows.
+
+WC will have three major kinds of pages: crises, organizations, and people, and gain each will link to the others.
+
+For the first phase of this project, we were required to:
+    * collect data on four crises and post to Blackboard on the World Crises forum
+    * create an XML schema and XML instance that validate, no agreement between groups about this in this phase
+    * create a set of GAE datastore models to represent the data
+    * create an import/export facility from the XML into GAE and back
+    * import/export data on only the four crises of the group
+
+=Collect data on four crises=
+We collected data for the following 4 crises:
+  * Haiti Earthquake
+  * Indonesia (Sumatra) Earthquake
+  * AIDS Pandemic
+  * War in Darfur
+
+Our data, as posted on Blackboard, was collected based on Professor Downing's minimum requirements:
+    * crises
+          ** name
+          ** kind
+          ** location
+          ** date and time
+          ** description
+          ** human impact
+          ** economic impact
+          ** resources needed
+          ** ways to help
+          ** images (e.g. Flickr, etc.)
+          ** videos (e.g. YouTube, etc.)
+          ** social networks (e.g. Facebook, Twitter, etc.)
+          ** links to other sites
+          ** organizations
+          ** people
+    * organizations
+          ** name
+          ** kind
+          ** location
+          ** history
+          ** contact info
+          ** social networks (e.g. Facebook, Twitter, etc.)
+          ** crises
+          ** people
+    * people
+          ** name
+          ** kind
+          ** location
+          ** social networks (e.g. Facebook, Twitter, etc.)
+          ** crises
+          ** organizations
+
+=Create an XML schema and XML instance=
+
+=Create a set of GAE datastore models=
+
+=Create an import/export facility=
+== Upload ==
+The GUI asks the user to select a .xml file to upload.  If no file or a file with a different extension is selected, the GUI will alert the user when the upload button is pressed.  The program will not upload the selected file until it matches a .xml extension.
+== Download ==
+When the user presses the download button, they are led to a page that displays the raw XML data for the 4 crises.  The user can do "File > Save As" to save it as a .xml file.
+
+
+=External Module: Beautiful Soup=
+  * Beautiful Soup- http://www.crummy.com/software/BeautifulSoup/
+  * Download- http://www.crummy.com/software/BeautifulSoup/download/2.x/BeautifulSoup.2.1.1.py
+Beautiful Soup is a Python HTML/XML parser designed for quick turnaround projects like screen-scraping. We use it in WC1.py to facilitate the import/export of XML data.  For convenience, the BeautifulSoup.py is included in the turnin zip file.
