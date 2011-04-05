@@ -6,8 +6,7 @@
 Our program will import and export xml files properly when run on the local host. However, the program does not work properly on the app engine web site. It will import but it fails to export. We plan on fixing this as soon as possible.
 
 Furthermore, our group was using the example on the project description website as a guide when we were creating our schema. We decided to use nested tags similar to the example shown on the website, something we noticed other groups did not use very much. We learned (eventually) that trying to parse nested XML tags is MUCH more complicated than parsing several single tags and as a result spent a great deal of time on this part of the project. We hope that this will be taken into consideration.<br />
-
---------------------------------------------------------<br />
+---------------------------------------------------------<br />
 
 Link: http://world-crisis.appspot.com/
 
