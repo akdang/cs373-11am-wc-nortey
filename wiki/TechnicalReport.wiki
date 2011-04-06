@@ -1,0 +1,27 @@
+    = Title =
+          o Names of each of the team members
+    = Executive Summary =
+    = Introduction =
+          o What is the problem?
+          o Why is it interesting and important?
+          o Why is it hard?
+          o What are the key components of our approach and results?
+          o Are there any specific limitations?
+    = Design =
+          o What were our design decisions?
+          o What special features did we add?
+          o UI
+          o UML
+          o XML
+    = Implementation =
+          o What is our solution?
+          o Frameworks and tools
+          o Datastore
+          o Import/Export
+          o Files and directory structure
+          o Which team member is most responsible for each of the major components of the project?
+    = Evaluation =
+          o How did we test our solution?
+          o unit tests
+          o performance tests
+          o groupware tests
