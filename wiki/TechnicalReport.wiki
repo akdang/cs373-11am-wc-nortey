@@ -1,14 +1,20 @@
-    = Title =
-          * Names of each of the team members
+    = World Crises Site: Technical Report =
+          Anh-Khoi Dang, John Lisco, Hassaan Markhiani, Jeremy Nortey, Jonathan Walker
 
     = Executive Summary =
+          * Summarize this Report.
 
     = Introduction =
           * What is the problem?
+Our Google App seeks to fill the void of a publicly accessible database of crises. It will contain information on various crises as well as the organizations and famous persons involved with them. Ways to help and lists of the resources needed will be included in the information on our site.
           * Why is it interesting and important?
+This app will satisfy the populace's need to stay informed and also facilitate aid to various organizations and afflicted regions. Helping others help others is always a good thing. And it's the same deal for staying aware.
           * Why is it hard?
+Because there are constant changes in the world, and crises, although well publicized, do not have perfectly concrete data. Online databases, encyclopedias, and most sites in general, need an exceptional interface and a strong search mechanism in order to be really popular. Designing the best interface is a strenuous task that can only be evaluated subjectively. Defining a best answer is difficult, if not impossible. And search functions are notorious stress points for many web developers.
+<info on our own technical problems?>
           * What are the key components of our approach and results?
           * Are there any specific limitations?
+
 
     = Design =
           * What were our design decisions?
