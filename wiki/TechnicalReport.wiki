@@ -26,6 +26,7 @@ Because there are constant changes in the world, and crises, although well publi
 <CSS/Website Design Decisions?>
 <GAE Datastore Design Decisions?>
           * What special features did we add?
+<Allowing Dangling Links: names can be included in related sections without having pages.>
           * UI
           * UML
           * XML
