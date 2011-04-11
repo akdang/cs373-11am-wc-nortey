@@ -13,8 +13,9 @@ This app will satisfy the populace's need to stay informed and also facilitate a
 Because there are constant changes in the world, and crises, although well publicized, do not have perfectly concrete data. Online databases, encyclopedias, and most sites in general, need an exceptional interface and a strong search mechanism in order to be really popular. Designing the best interface is a strenuous task that can only be evaluated subjectively. Defining a best answer is difficult, if not impossible. And search functions are notorious stress points for many web developers.
 <info on our own technical problems?>
           * What are the key components of our approach and results?
-<3 types of pages>
+<3 types of pages?>
 <Search?>
+<Datastore?>
           * Are there any specific limitations?
 <Manual Data Mining?>
 <limitations based on code?>
@@ -25,14 +26,23 @@ Because there are constant changes in the world, and crises, although well publi
 <Overall XML Design decisions?>
 <CSS/Website Design Decisions?>
 <GAE Datastore Design Decisions?>
+<Do we just introduce what is to follow? Should it follow this organization in that case? Feels like Special features should at least be after UI>
           * What special features did we add?
 <Allowing Dangling Links: names can be included in related sections without having pages.>
+<Embedded youtube videos>
+<Sweet Logo>
           * UI
+<Header Bar for basic navigation: Leads to directories>
+<Page Layout?>
           * UML
+<See Ex Cred>
           * XML
+<Mention our design?>
+<Explain structure of class's XML>
 
     = Implementation =
           * What is our solution?
+<What does this even mean? Give brief description of site?>
           * Frameworks and tools
 External Module: Beautiful Soup
 Beautiful Soup- http://www.crummy.com/software/BeautifulSoup/
@@ -48,6 +58,7 @@ Upload: The GUI asks the user to select a .xml file to upload. If no file or a f
 Download: When the user presses the download button, they are led to a page that displays the raw XML data for the 4 crises. The user can do "File > Save As" to save it as a .xml file.
 <Similarly based off of our previous wiki; need more? update?>
           * Files and directory structure
+<Is this the main sections reachable from the header bar?>
           * Which team member is most responsible for each of the major components of the project?
 
     = Evaluation =
