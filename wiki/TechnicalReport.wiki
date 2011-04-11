@@ -33,12 +33,12 @@ Because there are constant changes in the world, and crises, although well publi
     = Implementation =
           * What is our solution?
           * Frameworks and tools
-<Beautiful Soup, CSS, XML, XSD, Django, Python, GAE>
 External Module: Beautiful Soup
 Beautiful Soup- http://www.crummy.com/software/BeautifulSoup/
 Download- http://www.crummy.com/software/BeautifulSoup/download/2.x/BeautifulSoup.2.1.1.py
 Beautiful Soup is a Python HTML/XML parser designed for quick turnaround projects like screen-scraping. We use it in WC1.py to facilitate the import/export of XML data. For convenience, the BeautifulSoup?.py is included in the turnin zip file. 
 <from previous wiki as well>
+<Beautiful Soup, CSS, XML, XSD, Django, Python, GAE>
           * Datastore
 We used Beautiful Soup to parse the XML. We had three large outer tags (crises, people, organizations). We walk through the XML and store everything into a dictionary. Then we move everything from the dictionary into our internal datastore. For our data store design, we decided to make multiple tables and reference some tables by using the name property as a foreign key. We have a datastore table for all of the important tables (crises, related people, related organizations, locations, impacts, videos, images, resources needed, and social networks).
 <This was based off of our previous wiki; need more? update?>
