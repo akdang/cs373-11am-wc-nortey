@@ -13,11 +13,18 @@ This app will satisfy the populace's need to stay informed and also facilitate a
 Because there are constant changes in the world, and crises, although well publicized, do not have perfectly concrete data. Online databases, encyclopedias, and most sites in general, need an exceptional interface and a strong search mechanism in order to be really popular. Designing the best interface is a strenuous task that can only be evaluated subjectively. Defining a best answer is difficult, if not impossible. And search functions are notorious stress points for many web developers.
 <info on our own technical problems?>
           * What are the key components of our approach and results?
+<3 types of pages>
+<Search?>
           * Are there any specific limitations?
+<Manual Data Mining?>
+<limitations based on code?>
 
 
     = Design =
           * What were our design decisions?
+<Overall XML Design decisions?>
+<CSS/Website Design Decisions?>
+<GAE Datastore Design Decisions?>
           * What special features did we add?
           * UI
           * UML
