@@ -22,6 +22,8 @@ For the second phase of this project, we were required to:
 
 
 == Redesign the GAE Datastore models ==
+Because of the change in XML schema, the database model we used in the second phase was much more simple than the one in the first phase. The only tables we needed were for "People", "Crises", and "Organizations". With the new schema, we no longer had the need to have separate tables for data such as "Resources needed" and "Impacts". We were able to just store them as StringPropertyLists inside the three tables we used.
+
 
 == Redesign the import/export facility ==
 
