@@ -36,7 +36,9 @@ The GAE classes look very similar to the XML's inner classes, containing all the
 In conclusion, the GAE datastore UML is most easily summarized as a compact form of XML UML.
 
 == Create a GUI to present and navigate the data  ==
+The header bar at the top of every page aids in basic navigation.  Users can click on a link to view crises, organizations, or people.  After clicking on one of the header links, a page listing the various crises, organizations, or people is displayed.  Users can then click on the desired link to view the information.
 
+Each crises, organization, and people page follows a similar format.  The basic information, such as name, description, and location, is displayed.  Relevant images and videos are also displayed if provided.  Towards the bottom of each page, links to related crises, organizations, and people are displayed.  Also, external links and social networks pertaining to the person, organization, or crisis are included.
 
 =Phase 1=
 
