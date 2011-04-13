@@ -2,12 +2,6 @@
 
 =Introduction=
 
----------------------IMPORTANT NOTES---------------------<br />
-We have confirmed that our import/export XML facility works on the app engine web site (with the same code that we turned in).  Initially, our program worked only on localhost, but not on the app engine web site. As you can imagine, this was very bizarre behavior and took a while to debug.  The solution was to manually go into the data viewer in the appengine data store and delete all previous malformed XML stored in the database.
-
-Furthermore, our group was using the example on the project description website as a guide when we were creating our schema. We decided to use nested tags similar to the example shown on the website, something we noticed other groups did not use very much. We learned (eventually) that trying to parse nested XML tags is MUCH more complicated than parsing several single tags and as a result spent a great deal of time on this part of the project. We hope that this will be taken into consideration.<br />
----------------------IMPORTANT NOTES---------------------<br />
-
 Link: http://world-crisis.appspot.com/
 
 By the end of this project, we’ll have a Google App Engine application that tracks world crises, similar to how IMdB tracks movies and movie stars.
@@ -16,8 +10,33 @@ IMDB has two major kinds of pages: movies/shows and people. Movies/shows link to
 
 WC will have three major kinds of pages: crises, organizations, and people, and gain each will link to the others.
 
+=Phase 2=
+For the second phase of this project, we were required to: 
+    * redesign the GAE datastore models to represent the data
+    * redesign the import/export facility from the XML into GAE and back
+    * import/export data on the four crises with the new XML and post to the public repository
+    * create a UML diagram of either the XML design or the GAE datastore design
+    * 10 pts of extra credit for the doing the other UML design with an explanation of the differences
+    * create a GUI to present and navigate the data
+    * write an initial technical report
+
+
+== Redesign the GAE Datastore models ==
+
+== Redesign the import/export facility ==
+
+== Create a UML diagram of the XML or GAE datastore  ==
+
+== Create a GUI to present and navigate the data  ==
+
 
 =Phase 1=
+
+---------------------IMPORTANT NOTES---------------------<br />
+We have confirmed that our import/export XML facility works on the app engine web site (with the same code that we turned in).  Initially, our program worked only on localhost, but not on the app engine web site. As you can imagine, this was very bizarre behavior and took a while to debug.  The solution was to manually go into the data viewer in the appengine data store and delete all previous malformed XML stored in the database.
+
+Furthermore, our group was using the example on the project description website as a guide when we were creating our schema. We decided to use nested tags similar to the example shown on the website, something we noticed other groups did not use very much. We learned (eventually) that trying to parse nested XML tags is MUCH more complicated than parsing several single tags and as a result spent a great deal of time on this part of the project. We hope that this will be taken into consideration.<br />
+---------------------IMPORTANT NOTES---------------------<br />
 
 For the first phase of this project, we were required to:
     * collect data on four crises and post to Blackboard on the World Crises forum
