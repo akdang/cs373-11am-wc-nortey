@@ -3,6 +3,11 @@
 
     = Executive Summary =
           * Summarize this Report.
+<Sum A>
+This report is about a web application that tracks world crises.  We will introduce the problem, difficulties, our general approach to developing the application, and limitations.  Also, we will go into detail about our design decisions pertaining to special features, the user interface, UML, and XML.  Furthermore, we will describe our implementation, including frameworks and tools used and our use of the datastore and import/export facility.  Finally, we will describe how we tested our solution.
+
+<Sum B>
+This report is about a web application that tracks world crises and related facts. The goal is to assist people in informing themselves and providing aid. The most abstract way to describe our app is a system of 3 pages: Crises, People, and Organizations. There are challenges regarding keeping the database updated, having satisfactory search and overall interface. We will explain the difficulties further later and delve into their solutions as well. We also took steps further than our initial plans, such as embedding videos, that we will expand upon in this report. Furthermore, we will describe our implementation, including frameworks and tools used and our use of the datastore and import/export facility.  Finally, we will describe how we tested our solution.
 
     = Introduction =
           * What is the problem?
