@@ -26,6 +26,7 @@ Because of the change in XML schema, the database model we used in the second ph
 
 
 == Redesign the import/export facility ==
+In the previous phase, our import and export facilities were over complicated due to the fact that none of us had much experience with Beautiful soup. For the second phase, we were able to parse the XML data easily. It was also refactored to make testing our import/export functions much easier. Our way in which we exported was similar to the first phase, but it was not necessary to have to do as much checking for errors and null data.
 
 == Create a UML diagram of the XML or GAE datastore  ==
 We decided to do the extra credit portion of phase 2. The following describes the differences between our two UML's.  The UML diagrams can both be found in the Technical Report.
