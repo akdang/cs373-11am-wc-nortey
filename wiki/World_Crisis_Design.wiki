@@ -22,9 +22,21 @@ For the third phase of this project, we were required to:
     * give a presentation and demonstration in class
 
 ==Import/export data on all 24 crises of all the groups==
+According to Arun, "Minor changes are ok. But you may not add or remove data. You must use only what is published."
+
+Our minor changes:
+  * Merged UNICEF, The Global Fund, and President Obama pages between XML documents
+  * Replaced some special unicode characters that make BeautifulSoup break with regular characters
+  * Added descriptions to links that had none
 
 ==Create a search capability==
+Our search box appears on every page.  When the user inputs a query, we search for an exact match (non case sensitive) and then search each crises, organization, and person in the datastore.  The results are displayed in tabular format.  The user can click on the column headers to alphabetically sort the table.  
 
+For Crises results, we chose to display Name, Category, Location, Date, Number of Related People, Organizations, Crises, and Ways To Help.
+
+For People results, we chose to display Name, Category, Origin, Number of Related People, Organizations, and Crises.
+
+For Organizations results, we chose to display Name, Category, Location, Number of Related People, Organizations, and Crises.
 
 =Phase 2=
 For the second phase of this project, we were required to: 
