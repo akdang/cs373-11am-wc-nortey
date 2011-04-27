@@ -10,6 +10,22 @@ IMDB has two major kinds of pages: movies/shows and people. Movies/shows link to
 
 WC will have three major kinds of pages: crises, organizations, and people, and gain each will link to the others.
 
+=Phase 3=
+For the third phase of this project, we were required to: 
+    * import/export data on all 24 crises of all the groups
+    * create whichever of the two UML diagrams that were NOT done in the previous phase, explain the differences, nothing to do, if already done for extra credit in the last phase
+    * edit the technical report
+    * create a search capability
+    * the result of a search must be a table of crises with sortable columns of the attributes that you feel are important
+    * create a presentation
+    * create a demonstration
+    * give a presentation and demonstration in class
+
+==Import/export data on all 24 crises of all the groups==
+
+==Create a search capability==
+
+
 =Phase 2=
 For the second phase of this project, we were required to: 
     * redesign the GAE datastore models to represent the data
