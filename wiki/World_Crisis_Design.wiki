@@ -28,6 +28,7 @@ Our minor changes:
   * Merged UNICEF, The Global Fund, and President Obama pages between XML documents
   * Replaced some special unicode characters that make BeautifulSoup break with regular characters
   * Added descriptions to links that had none
+  * Fixed broken image links
 
 ==Create a search capability==
 Our search box appears on every page.  When the user inputs a query, we search for an exact match (non case sensitive) and then search each crises, organization, and person in the datastore.  The results are displayed in tabular format.  The user can click on the column headers to alphabetically sort the table.  
