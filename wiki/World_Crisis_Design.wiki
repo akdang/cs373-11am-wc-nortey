@@ -36,11 +36,8 @@ Our search box appears on every page.  In order to refine the search, 3 checkbox
 
 When the user submits a query, we search for an exact match (non case sensitive) and then search each crises, organization, and person in accordance with what the user checked.  The results are displayed in tabular format.  The user can click on the column headers to alphabetically sort the table.  
 
-For Crises results, we chose to display Name, Category, Location, Date, Number of Related People, Organizations, Crises, and Ways To Help.
 
-For People results, we chose to display Name, Category, Origin, Number of Related People, Organizations, and Crises.
-
-For Organizations results, we chose to display Name, Category, Location, Number of Related People, Organizations, and Crises.
+Since all three major kinds of data (Crises, People, Orgs) have some data members that are not included in the other two types (for instance, 'ways to help' does not appear in People or Orgs), we decided to display different fields of information for each of the three separate kinds of data.  However, the format of the display (as a table of entries) stays the same for consistency.
 
 ==XML Data Merging==
 One feature that was omitted was the ability to auto-merge data from multiple XML files.  Instead, the members of our group decided to manually merge the XML files from the six groups into one central file.  A comparison between the two possibilities, along with the reasoning behind the team's decision on this omission, is described in detail below:
