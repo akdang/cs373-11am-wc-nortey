@@ -31,7 +31,9 @@ Our minor changes:
   * Fixed broken image links
 
 ==Create a search capability==
-Our search box appears on every page.  When the user inputs a query, we search for an exact match (non case sensitive) and then search each crises, organization, and person in the datastore.  The results are displayed in tabular format.  The user can click on the column headers to alphabetically sort the table.  
+Our search box appears on every page.  In order to refine the search, 3 checkboxes named Crises, Organizations, and People appear under the search box. Initially, all check boxes are checked by default.  If the user unchecks all boxes, then the search is done as if all checkboxes were checked.  That is, Crises, Organizations, and People will be searched when all 3 checkboxes are checked and when all 3 checkboxes are unchecked.  
+
+When the user inputs a query, we search for an exact match (non case sensitive) and then search each crises, organization, and person in accordance with what the user checked.  The results are displayed in tabular format.  The user can click on the column headers to alphabetically sort the table.  
 
 For Crises results, we chose to display Name, Category, Location, Date, Number of Related People, Organizations, Crises, and Ways To Help.
 
