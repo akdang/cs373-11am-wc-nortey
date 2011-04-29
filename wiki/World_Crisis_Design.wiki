@@ -24,7 +24,8 @@ For the third phase of this project, we were required to:
 ==Import/export data on all 24 crises of all the groups==
 According to Arun, "Minor changes are ok. But you may not add or remove data. You must use only what is published."
 
-Our minor changes:
+Our minor changes to the XML:
+  * Combined data for all 6 groups into one file (wc.xml)
   * Merged UNICEF, The Global Fund, and President Obama pages between XML documents
   * Replaced some special unicode characters that make BeautifulSoup break with regular characters
   * Added descriptions to links that had none
