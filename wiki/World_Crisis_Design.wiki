@@ -41,6 +41,19 @@ For People results, we chose to display Name, Category, Origin, Number of Relate
 
 For Organizations results, we chose to display Name, Category, Location, Number of Related People, Organizations, and Crises.
 
+==XML Data Merging==
+One feature that was omitted was the ability to auto-merge data from multiple XML files.  Instead, the members of our group decided to manually merge the XML files from the six groups into one central file.  A comparison between the two possibilities, along with the reasoning behind the team's decision on this omission, is described in detail below:
+
+Some key drawbacks to the idea of automated merging:
+ * it seemed more logical to mess with and manipulate data completely before storing it into the database.  This makes data integrity more possible, as data in the datastore is "official", or finalized.
+ * information is scattered over several file locations, whereas it seemed to the group that typically a production website of a company would contain information specific to a certain type of data in one location, as opposed to a disorganized "scattering".
+
+Some advantages of automated merging:
+ * the ability to allow data collected from sources other than the initial source of data-miners (for instance, if automated data mining stored a new file of data every day, the auto-merge could handle this, whereas the manual merge would require more manual effort per day)
+ * a one-time implementation, then any amount of data in its proper XML format can be handled automatically
+
+Since we realized that the amount of data collected by the groups was not to be expanded on, we decided that a simple one-time manual merge would be the most time-efficient, simple solution.
+
 =Phase 2=
 For the second phase of this project, we were required to: 
     * redesign the GAE datastore models to represent the data
