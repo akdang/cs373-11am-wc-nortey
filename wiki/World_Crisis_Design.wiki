@@ -11,8 +11,6 @@ IMDB has two major kinds of pages: movies/shows and people. Movies/shows link to
 WC will have three major kinds of pages: crises, organizations, and people, and gain each will link to the others.
 
 =Phase 3=
-** Note in Phase III:  The import/export does not merge data automatically.  We decided to merge all six groups' data into one file instead (xml/wc.xml).  It is recommended to import data using this file.  Although importing all six XML files separately will also work, it will not merge the data of any conflicting people, orgs, or crises.
-
 For the third phase of this project, we were required to: 
     * import/export data on all 24 crises of all the groups
     * create whichever of the two UML diagrams that were NOT done in the previous phase, explain the differences, nothing to do, if already done for extra credit in the last phase
@@ -24,6 +22,8 @@ For the third phase of this project, we were required to:
     * give a presentation and demonstration in class
 
 ==Import/export data on all 24 crises of all the groups==
+** Note in Phase III:  The import/export does not merge data automatically.  We decided to merge all six groups' data into one file instead (xml/wc.xml).  It is recommended to import data using this file.  Although importing all six XML files separately will also work, it will not merge the data of any conflicting people, orgs, or crises.
+
 According to Arun, "Minor changes are ok. But you may not add or remove data. You must use only what is published."
 
 Our minor changes to the XML:
