@@ -1,0 +1,167 @@
+# Introduction #
+
+Link: http://world-crisis.appspot.com/
+
+By the end of this project, we’ll have a Google App Engine application that tracks world crises, similar to how IMdB tracks movies and movie stars.
+
+IMDB has two major kinds of pages: movies/shows and people. Movies/shows link to people and people link back to movies/shows.
+
+WC will have three major kinds of pages: crises, organizations, and people, and gain each will link to the others.
+
+# Phase 3 #
+For the third phase of this project, we were required to:
+  * import/export data on all 24 crises of all the groups
+  * create whichever of the two UML diagrams that were NOT done in the previous phase, explain the differences, nothing to do, if already done for extra credit in the last phase
+  * edit the technical report
+  * create a search capability
+  * the result of a search must be a table of crises with sortable columns of the attributes that you feel are important
+  * create a presentation
+  * create a demonstration
+  * give a presentation and demonstration in class
+
+## Import/export data on all 24 crises of all the groups ##
+ Note in Phase III:  The import/export does not merge data automatically.  We decided to merge all six groups' data into one file instead (xml/wc.xml).  It is recommended to import data using this file.  Although importing all six XML files separately will also work, it will not merge the data of any conflicting people, orgs, or crises.
+
+According to Arun, "Minor changes are ok. But you may not add or remove data. You must use only what is published."
+
+Our minor changes to the XML:
+  * Combined data for all 6 groups into one file (wc.xml)
+  * Merged UNICEF, The Global Fund, and President Obama pages between XML documents
+  * Replaced some special unicode characters that make BeautifulSoup break with regular characters
+  * Added descriptions to links that had none
+  * Fixed broken image links
+
+## Create a search capability ##
+Our search box appears on every page.  In order to refine the search, 3 checkboxes named Crises, Organizations, and People appear under the search box. Initially, all check boxes are checked by default.  If the user unchecks all boxes, then the search is done as if all checkboxes were checked.  That is, Crises, Organizations, and People will be searched when all 3 checkboxes are checked and when all 3 checkboxes are unchecked.
+
+When the user submits a query, we search for an exact match (non case sensitive) and then search each crises, organization, and person in accordance with what the user checked.  The results are displayed in tabular format.  The user can click on the column headers to alphabetically sort the table.
+
+
+Since all three major kinds of data (Crises, People, Orgs) have some data members that are not included in the other two types (for instance, 'ways to help' does not appear in People or Orgs), we decided to display different fields of information for each of the three separate kinds of data.  However, the format of the display (as a table of entries) stays the same for consistency.
+
+## XML Data Merging ##
+One feature that was omitted was the ability to auto-merge data from multiple XML files.  Instead, the members of our group decided to manually merge the XML files from the six groups into one central file.  A comparison between the two possibilities, along with the reasoning behind the team's decision on this omission, is described in detail below:
+
+Some key drawbacks to the idea of automated merging:
+  * it seemed more logical to mess with and manipulate data completely before storing it into the database.  This makes data integrity more possible, as data in the datastore is "official", or finalized.
+  * information is scattered over several file locations, whereas it seemed to the group that typically a production website of a company would contain information specific to a certain type of data in one location, as opposed to a disorganized "scattering".
+
+Some advantages of automated merging:
+  * the ability to allow data collected from sources other than the initial source of data-miners (for instance, if automated data mining stored a new file of data every day, the auto-merge could handle this, whereas the manual merge would require more manual effort per day)
+  * a one-time implementation, then any amount of data in its proper XML format can be handled automatically
+
+Since we realized that the amount of data collected by the groups was not to be expanded on, we decided that a simple one-time manual merge would be the most time-efficient, simple solution.
+
+# Phase 2 #
+For the second phase of this project, we were required to:
+  * redesign the GAE datastore models to represent the data
+  * redesign the import/export facility from the XML into GAE and back
+  * import/export data on the four crises with the new XML and post to the public repository
+  * create a UML diagram of either the XML design or the GAE datastore design
+  * 10 pts of extra credit for the doing the other UML design with an explanation of the differences
+  * create a GUI to present and navigate the data
+  * write an initial technical report
+
+
+## Redesign the GAE Datastore models ##
+Because of the change in XML schema, the database model we used in the second phase was much more simple than the one in the first phase. The only tables we needed were for "People", "Crises", and "Organizations". With the new schema, we no longer had the need to have separate tables for data such as "Resources needed" and "Impacts". We were able to just store them as StringPropertyLists inside the three tables we used.
+
+
+## Redesign the import/export facility ##
+In the previous phase, our import and export facilities were over complicated due to the fact that none of us had much experience with Beautiful soup. For the second phase, we were able to parse the XML data easily. It was also refactored to make testing our import/export functions much easier. Our way in which we exported was similar to the first phase, but it was not necessary to have to do as much checking for errors and null data.
+
+## Create a UML diagram of the XML or GAE datastore ##
+We decided to do the extra credit portion of phase 2. The following describes the differences between our two UML's.  The UML diagrams can both be found in the Technical Report.
+
+### Comparison ###
+Our two models are fairly similar, although their UML's look vastly different. The XML UML has an over arching site class that holds an optional instance of crises, people, and organizations. Each of those classes point to 1 or more instances of their respective inner classes: crisis, person, and organization. Then the two models start showing their similarities. The GAE datastore UML, has one large class for each of crises, people, and organizations, that it throws instances of into lists named relatively to what they store.
+
+The GAE classes look very similar to the XML's inner classes, containing all the XML's elements, and it represents the composition relationships as single StringList instead of having the layers of abstraction. Their related<> elements are used to relate to instances of the other classes, but not implicitly as part of the format. Because of the compaction of this relationship, in the GAE, it's directly 0 or more, while the XML has a required layer, an optional layer, and finally a layer of 1 or more.
+
+In conclusion, the GAE datastore UML is most easily summarized as a compact form of XML UML.
+
+## Create a GUI to present and navigate the data ##
+The header bar at the top of every page aids in basic navigation.  Users can click on a link to view crises, organizations, or people.  After clicking on one of the header links, a page listing the various crises, organizations, or people is displayed.  Users can then click on the desired link to view the information.
+
+Each crises, organization, and people page follows a similar format.  The basic information, such as name, description, and location, is displayed.  Relevant images and videos are also displayed if provided.  Towards the bottom of each page, links to related crises, organizations, and people are displayed.  Also, external links and social networks pertaining to the person, organization, or crisis are included.
+
+# Phase 1 #
+
+---------------------IMPORTANT NOTES---------------------<br />
+We have confirmed that our import/export XML facility works on the app engine web site (with the same code that we turned in).  Initially, our program worked only on localhost, but not on the app engine web site. As you can imagine, this was very bizarre behavior and took a while to debug.  The solution was to manually go into the data viewer in the appengine data store and delete all previous malformed XML stored in the database.
+
+Furthermore, our group was using the example on the project description website as a guide when we were creating our schema. We decided to use nested tags similar to the example shown on the website, something we noticed other groups did not use very much. We learned (eventually) that trying to parse nested XML tags is MUCH more complicated than parsing several single tags and as a result spent a great deal of time on this part of the project. We hope that this will be taken into consideration.<br />
+---------------------IMPORTANT NOTES---------------------<br />
+
+For the first phase of this project, we were required to:
+  * collect data on four crises and post to Blackboard on the World Crises forum
+  * create an XML schema and XML instance that validate, no agreement between groups about this in this phase
+  * create a set of GAE datastore models to represent the data
+  * create an import/export facility from the XML into GAE and back
+  * import/export data on only the four crises of the group
+
+## Collect data on four crises ##
+We collected data for the following 4 crises:
+  * Haiti Earthquake
+  * Indonesia (Sumatra) Earthquake
+  * AIDS Pandemic
+  * War in Darfur
+
+Our data, as posted on Blackboard, was collected based on Professor Downing's minimum requirements:
+  * crises
+    * name
+    * kind
+    * location
+    * date and time
+    * description
+    * human impact
+    * economic impact
+    * resources needed
+    * ways to help
+    * images (e.g. Flickr, etc.)
+    * videos (e.g. YouTube, etc.)
+    * social networks (e.g. Facebook, Twitter, etc.)
+    * links to other sites
+    * organizations
+    * people
+  * organizations
+    * name
+    * kind
+    * location
+    * history
+    * contact info
+    * social networks (e.g. Facebook, Twitter, etc.)
+    * crises
+    * peopleCreate a set of GAE datastore models
+  * people
+    * name
+    * kind
+    * location
+    * social networks (e.g. Facebook, Twitter, etc.)
+    * crises
+    * organizations
+
+## Create an XML schema and XML instance ##
+Our Schema was roughly designed around Downing's specifications. There were some changes based on protected words, usually name or type. We used most things in sequence, so form is required. And we made many fields optional (0 or 1 instances). For most instances of multiplicity, instead of making multiple fields directly available, we created a single instance that allowed multiple elements inside.
+
+One large difference between our design and the specifications is that we removed Ways to Help in favor of merging that data with resources needed.
+
+We also made a single Impact type that would account for both Human and Economic impacts, as well as any other type of impact, such as Environmental.
+Additionally, we added an optional gross cost under the overall Impacts Type (which is multiple impacts, plus the gross) which would allow information such as "Total humans affected" in neat understandable location.
+
+In order to relate Crises and People and Organizations to each other, we used a system of keys and keyrefs, where the my\_name field of each individual object is set up as a key in the xsd, so there are no replicated names. And each object has a related section that also have their own my\_name's in them. Those my\_name's are used as key references that require that their value matches some key. This guarantees that there are no hanging links.
+
+## Create a set of GAE datastore models ##
+We used Beautiful Soup to parse the XML. We had three large outer tags (crises, people, organizations). We walk through the XML and store everything into a dictionary. Then we move everything from the dictionary into our internal datastore. For our data store design, we decided to make multiple tables and reference some tables by using the name property as a foreign key. We have a datastore table for all of the important tables (crises, related people, related organizations, locations, impacts, videos, images, resources needed, and social networks).
+
+## Create an import/export facility ##
+### Upload ###
+The GUI asks the user to select a .xml file to upload.  If no file or a file with a different extension is selected, the GUI will alert the user when the upload button is pressed.  The program will not upload the selected file until it matches a .xml extension.
+## Download ##
+When the user presses the download button, they are led to a page that displays the raw XML data for the 4 crises.  The user can do "File > Save As" to save it as a .xml file.
+
+
+## External Module: Beautiful Soup ##
+  * Beautiful Soup- http://www.crummy.com/software/BeautifulSoup/
+  * Download- http://www.crummy.com/software/BeautifulSoup/download/2.x/BeautifulSoup.2.1.1.py
+Beautiful Soup is a Python HTML/XML parser designed for quick turnaround projects like screen-scraping. We use it in WC1.py to facilitate the import/export of XML data.  For convenience, the BeautifulSoup.py is included in the turnin zip file.

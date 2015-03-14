@@ -1,0 +1,68 @@
+<Sum A>
+This report is about a web application that tracks world crises.  We will introduce the problem, difficulties, our general approach to developing the application, and limitations.  Also, we will go into detail about our design decisions pertaining to special features, the user interface, UML, and XML.  Furthermore, we will describe our implementation, including frameworks and tools used and our use of the datastore and import/export facility.  Finally, we will describe how we tested our solution.
+
+<Sum B>
+This report is about a web application that tracks world crises and related facts. The goal is to assist people in informing themselves and providing aid. The most abstract way to describe our app is a system of 3 pages: Crises, People, and Organizations. There are challenges regarding keeping the database updated, having satisfactory search and overall interface. We will explain the difficulties further later and delve into their solutions as well. We also took steps further than our initial plans, such as embedding videos, that we will expand upon in this report. Furthermore, we will describe our implementation, including frameworks and tools used and our use of the datastore and import/export facility.  Finally, we will describe how we tested our solution.
+
+> # Introduction #
+    * What is the problem?
+Our Google App seeks to fill the void of a publicly accessible database of crises. It will contain information on various crises as well as the organizations and famous persons involved with them. Ways to help and lists of the resources needed will be included in the information on our site.
+    * Why is it interesting and important?
+This app will satisfy the populace's need to stay informed and also facilitate aid to various organizations and afflicted regions. Helping others help others is always a good thing. And it's the same deal for staying aware.
+    * Why is it hard?
+Because there are constant changes in the world, and crises, although well publicized, do not have perfectly concrete data. Online databases, encyclopedias, and most sites in general, need an exceptional interface and a strong search mechanism in order to be really popular. Designing the best interface is a strenuous task that can only be evaluated subjectively. Defining a best answer is difficult, if not impossible. And search functions are notorious stress points for many web developers.
+<info on our own technical problems?>
+    * What are the key components of our approach and results?
+<3 types of pages?>
+<Search?>
+<Datastore?>
+    * Are there any specific limitations?
+<Manual Data Mining?>
+<limitations based on code?>
+
+
+> # Design #
+    * What were our design decisions?
+<Overall XML Design decisions?>
+<CSS/Website Design Decisions?>
+<GAE Datastore Design Decisions?>
+<Do we just introduce what is to follow? Should it follow this organization in that case? Feels like Special features should at least be after UI>
+    * What special features did we add?
+<Allowing Dangling Links: names can be included in related sections without having pages.>
+<Embedded youtube videos>
+<Sweet Logo>
+    * UI
+<Header Bar for basic navigation: Leads to directories>
+<Page Layout?>
+    * UML
+<See Ex Cred>
+    * XML
+<Mention our design?>
+<Explain structure of class's XML>
+
+> # Implementation #
+    * What is our solution?
+<What does this even mean? Give brief description of site?>
+    * Frameworks and tools
+External Module: Beautiful Soup
+Beautiful Soup- http://www.crummy.com/software/BeautifulSoup/
+Download- http://www.crummy.com/software/BeautifulSoup/download/2.x/BeautifulSoup.2.1.1.py
+Beautiful Soup is a Python HTML/XML parser designed for quick turnaround projects like screen-scraping. We use it in WC1.py to facilitate the import/export of XML data. For convenience, the BeautifulSoup?.py is included in the turnin zip file.
+<from previous wiki as well>
+<Beautiful Soup, CSS, XML, XSD, Django, Python, GAE>
+    * Datastore
+We used Beautiful Soup to parse the XML. We had three large outer tags (crises, people, organizations). We walk through the XML and store everything into a dictionary. Then we move everything from the dictionary into our internal datastore. For our data store design, we decided to make multiple tables and reference some tables by using the name property as a foreign key. We have a datastore table for all of the important tables (crises, related people, related organizations, locations, impacts, videos, images, resources needed, and social networks).
+<This was based off of our previous wiki; need more? update?>
+    * Import/Export
+Upload: The GUI asks the user to select a .xml file to upload. If no file or a file with a different extension is selected, the GUI will alert the user when the upload button is pressed. The program will not upload the selected file until it matches a .xml extension.
+Download: When the user presses the download button, they are led to a page that displays the raw XML data for the 4 crises. The user can do "File > Save As" to save it as a .xml file.
+<Similarly based off of our previous wiki; need more? update?>
+    * Files and directory structure
+<Is this the main sections reachable from the header bar?>
+    * Which team member is most responsible for each of the major components of the project?
+
+> # Evaluation #
+    * How did we test our solution?
+    * unit tests
+    * performance tests
+    * groupware tests
